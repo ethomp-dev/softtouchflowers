@@ -1,0 +1,190 @@
+$primary-button: #EC5564;
+$secondary-button: #F07783;
+
+.text-center {
+  text-align: center;
+}
+
+.inline-heading {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+
+  &.double-spaced {
+    line-height: 4rem;
+  }
+}
+
+a {
+  color: $primary-button;
+
+  &:hover {
+    color: #bc4450;
+  }
+}
+
+.vertical-rule {
+  border-right: 3px solid #FBDDE0;
+  border-bottom: none;
+
+  @media (max-width: 768px) {
+    border-right: none;
+    border-bottom: 3px solid #FBDDE0;
+  }
+}
+
+.thumbnail {
+  &.thumbnail-profile {
+    float: right;
+    height: 250px;
+    position: relative;
+    padding: 10px;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &.thumbnail-folder {
+    min-height: 200px;
+    padding: 10%;
+    text-align: center;
+
+    img {
+      max-height: 100px;
+      min-height: auto;
+    }
+  }
+}
+
+.j-image {
+  background-color: #000;
+  background-image: url('../img/Wedding_BradAndMagdalenaPerry_1_dark.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 91.5%;
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  padding: 10%;
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
+
+#columns {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+
+  @media (min-width: 960px) {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+  }
+
+  @media (min-width: 1100px) {
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+  }
+}
+
+button, .button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0 0 1.11111rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 1.77778rem 1rem 1.77778rem;
+    font-size: 2rem;
+    background-color: $primary-button;
+    border-color: $primary-button;
+    color: #FFFFFF;
+    transition: background-color 300ms ease-out;
+
+    &.secondary {
+      background-color: $secondary-button;
+      border-color: $secondary-button;
+    }
+}
+
+a.button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* PURE CSS - FLOATING LABELS */
+
+input, select, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.has-float-label {
+  display: block;
+  position: relative;
+}
+.has-float-label label, .has-float-label > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: text;
+  font-size: 75%;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.has-float-label input,
+.has-float-label select,
+.has-float-label textarea {
+  font-size: inherit;
+  padding-top: 1em;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 4px solid rgba($primary-button,0.3);
+}
+.has-float-label input::-webkit-input-placeholder,
+.has-float-label select::-webkit-input-placeholder,
+.has-float-label textarea::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.has-float-label input:placeholder-shown:not(:focus)::-webkit-input-placeholder,
+.has-float-label select:placeholder-shown:not(:focus)::-webkit-input-placeholder,
+.has-float-label textarea:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0;
+}
+.has-float-label input:placeholder-shown:not(:focus) + *,
+.has-float-label select:placeholder-shown:not(:focus) + *,
+.has-float-label textarea:placeholder-shown:not(:focus) + * {
+  font-size: 150%;
+  opacity: .5;
+  top: .25em;
+}
+.has-float-label input:focus,
+.has-float-label select:focus,
+.has-float-label textarea:focus {
+  outline: none;
+  border-color: rgba($primary-button,0.5);
+}
+.input-group {
+  display: table;
+  width: 100%;
+}
+.input-group > * {
+  display: table-cell;
+  width: 50%;
+}

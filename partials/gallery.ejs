@@ -1,0 +1,11 @@
+<% if (gallery.length) { %>
+  <div id="container">
+  	<div id="columns">
+      <% gallery.forEach(function(image) { %>
+		    <div class="thumbnail">
+          <img src="<%= image %>" alt="<%= image %>">
+        </div>
+      <% }) %>
+    </div>
+  </div>
+<% } %>
