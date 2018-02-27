@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soft Touch Flowers</title>
+    <link rel="icon" href="/img/favicon.png" type="img/png">
+
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_ZYhkGA9RO7SC69FGG51ru");
+       })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/client.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $('a[href="#collapse1"]').click();
+      });
+
+      $('a[data-toggle="collapse"]').click(function() {
+        if ($(this).hasClass('more')) {
+          $(this).text('Read More');
+          $(this).removeClass('more');
+        } else {
+          $(this).text('Read Less');
+          $(this).addClass('more');
+        }
+      });
+
+      $('#sendBtn').click(function() {
+        var name    = $('#contactForm').find('input#name').val(),
+            email   = $('#contactForm').find('input#email').val(),
+            message = $('#contactForm').find('textarea#message').val();
+
+        if (name != "" && email != "" && message != "") {
+          emailjs.send("mailgun", "basic_template", { name: name, email: email, message: message });
+          window.location = '/confirm';
+        }
+      });
+    </script>
+  </body>
+</html>
