@@ -11,6 +11,7 @@ import GalleryPhotos from './containers/GalleryPhotos'
 import Testimonials from './containers/Testimonials'
 import Tips from './containers/Tips'
 import Contact from './containers/Contact'
+import Vendors from './containers/Vendors'
 import Confirmation from './containers/Confirmation'
 
 const app = document.getElementById('app')
@@ -21,9 +22,10 @@ ReactDOM.render(
       <IndexRoute component={Home} />
       <Route path='/about' name='about' component={About} />
       <Route path='/gallery' name='gallery' component={Gallery} />
-      <Route path='/galleryPhotos/:name' name='galleryPhotos' component={GalleryPhotos} />
+      <Route path='/gallery-photos/:name' name='gallery-photos' component={GalleryPhotos} />
       <Route path='/testimonials' name='testimonials' component={Testimonials} />
       <Route path='/tips' name='tips' component={Tips} />
+      <Route path='/preferred-vendors' name='preferred-vendors' component={Vendors} />
       <Route path='/contact' name='contact' component={Contact} />
       <Route path='/confirm' name='confirm' component={Confirmation} />
     </Route>

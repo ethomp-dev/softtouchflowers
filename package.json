@@ -28,7 +28,7 @@
   "scripts": {
     "dev": "webpack-dev-server -d --history-api-fallback --content-base src --inline --hot",
     "test": "standard",
-    "deploy": "webpack && surge /Users/elizabeththompson/Documents/client\\ work/softtouchflowersdotcom/src softtouchflowersandgifts.com/"
+    "deploy": "webpack && mv src/index.html src/200.html && surge /Users/elizabeththompson/Documents/client\\ work/soft\\ touch\\ flowers/softtouchflowers/src softtouchflowersandgifts.com/ && mv src/200.html src/index.html"
   },
   "author": "Elizabeth Thompson"
 }

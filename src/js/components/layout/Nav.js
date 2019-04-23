@@ -25,6 +25,7 @@ export default class Nav extends React.Component {
               <li><Link to='/gallery' activeClassName='active'>Photo Gallery</Link></li>
               <li><Link to='/testimonials' activeClassName='active'>Testimonials</Link></li>
               <li><Link to='/tips' activeClassName='active'>Weddings Tips</Link></li>
+              <li><Link to='/preferred-vendors' activeClassName='active'>Preferred Vendors</Link></li>
               <li><Link to='/contact' activeClassName='active'>Contact</Link></li>
             </ul>
             <span class='visible-md-block visible-lg-block'>
