@@ -8,7 +8,7 @@ export default ({ info }) => (
         <p>
             <a href={`tel:${info.phone}`} style={{ color: '#979797' }}>{info.phone}</a>
             <span> | </span>
-            <a href={info.website} target='_blank'>Visit Website</a>
+            <a href={info.website} target='_blank' rel='nofollow'>Visit Website</a>
         </p>
     </div>
 )
